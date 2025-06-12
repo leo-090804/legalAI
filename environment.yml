@@ -1,0 +1,16 @@
+name: legalAI
+channels:
+  - microsoft
+  - jmcmurray
+  - conda-forge
+  - anacond
+  - defaults
+  - https://anaconda.org
+dependencies:
+  - python=3.11
+  - fastapi
+  - uvicorn
+  - beautifulsoup4
+  - playwright
+  - requests
+  - json
