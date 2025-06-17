@@ -137,7 +137,10 @@ def fetch_and_parse_page(session, doc_type_id, page_num):
             link_tag = item.select_one("p.title > a")
             if link_tag and "href" in link_tag.attrs:
                 full_url = urljoin(BASE_URL, link_tag["href"])
-                links_on_page.add(full_url)
+
+                if "vbpq-toanvan" in full_url:
+                    links_on_page.add(full_url)
+
         return links_on_page
     except requests.exceptions.RequestException:
         return set()
